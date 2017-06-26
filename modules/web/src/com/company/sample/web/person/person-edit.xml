@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.person.PersonEdit"
+        datasource="personDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.sample.web.person">
+    <dsContext>
+        <datasource id="personDs"
+                    class="com.company.sample.entity.Person"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="AUTO"
+                width="AUTO"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="personDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="email"/>
+                <field property="phone"/>
+                <field property="sendingMessages"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
